@@ -24,7 +24,7 @@ import config
 from ShrutiMusic import app
 
 def start_panel(_):
-    buttons = [
+        buttons = [
         [
             InlineKeyboardButton(
                 text=_["S_B_1"], url=f"https://t.me/{app.username}?startgroup=true"
@@ -32,6 +32,7 @@ def start_panel(_):
             InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_GROUP),
         ],
         [
+            InlineKeyboardButton(text=_["E_X_1"], url=config.SUPPORT_GROUP),
             InlineKeyboardButton(text=_["S_B_11"], callback_data="about_page")  # About button
         ],
     ]
@@ -54,7 +55,9 @@ def private_panel(_):
                 text=_["S_B_12"],
                 callback_data="owner_page"
             )
-        ],          InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
         ],
         [
             InlineKeyboardButton(text=_["S_B_4"], callback_data="help_page_1")
